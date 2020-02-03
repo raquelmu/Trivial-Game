@@ -1,69 +1,4 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-  
-  function diceResult(min, max){
-    return Math.floor(Math.random() * (max - min + 1 ) + min);
-  }
-
-
-
-  function paintGrey(){
-    let arrayBox = document.querySelectorAll("[id^='box']");
-    for(let i = 0; i < arrayBox.length; i++){
-      //arrayBox[i].style.backgroundColor = "grey";
-      //if( arrayBox[i] == )
-      arrayBox[i].classList.add("grey")
-    }
-  }
-
-
-
-  function movePlayer(dice){
-    player.position += dice;
-    for(let i = 0; i < box.length; i++){
-      if(box[i].number===player.position){
-        let boxPlayer = document.getElementById(box[i].id)
-        //boxPlayer.style.backgroundColor = "red";
-        boxPlayer.classList.remove("grey")
-      }
-    }
-  }
-
-
-
-  function knowCategory(){
-    for(let i = 0; i < box.length; i++){
-      if(box[i].number===player.position){
-        return box[i].category;
-      }
-    }
-  }
-
-
-
-  function showQuestion(){
-    let questionsCategory = []
-    for(let i = 0; i < questions.length; i++){
-      if(questions[i].category == knowCategory()){
-        //return questionResult()
-        questionsCategory.push(questions[i])
-      }
-    }
-    let resultQuestionIndex = diceResult(0, questionsCategory.length);
-    return questionsCategory[resultQuestionIndex];
-    
-  }
-
-    
-  
-  
-
-  let player = {
-    position: 0,
-    puntuacion: 0,
-  }
-
-
-  let box = [
+let box = [
     {
       category: "",
       number: 0,
@@ -299,309 +234,275 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   let questions = [
     {
-      question: "The Indian Ocean is the third largest ocean in the world",
-      answer: true,
-      category: "geography",
+      question: "Are there 27 teeth in an average adult human?",
+      answer: false,
+      category: "science",
       id: "question1",
     },
     {
-      question: "pregunta ciencia 1",
+      question: "Does the atmosphere breath?",
       answer: true,
       category: "science",
       id: "question2",
     },
     {
-      question: "ciencia 2",
+      question: "Did Einstein create the law of the gravity?",
       answer: false,
       category: "science",
       id: "question3",
     },
     {
-      question: "science 3",
+      question: "Is the smallest mammal in the world a bat?",
       answer: true,
       category: "science",
       id: "question4",
     },
     {
-      question: "arts 1",
+      question: "A full moon happens when Earth is between the sun and the moon",
       answer: true,
-      category: "arts",
+      category: "science",
       id: "question5",
     },
     {
-      question: "arts 2",
+      question: "Aluminium is GOOD at conducting heat",
       answer: true ,
-      category: "arts",
+      category: "science",
       id: "question6",
     },
     {
-      question: "There are more countries in Africa than Asia",
-      answer: true,
-      category: "georaphy",
+      question: "During photosynthesis, plants make glucose and carbon dioxide",
+      answer: false,
+      category: "science",
       id: "question7",
     },
     
     {
-      question: "arts 3",
+      question: "Na is the chemical symbol for calcium",
       answer: false,
-      category: "arts",
+      category: "science",
       id: "question8",
     },
     {
-      question: "entertainment 1",
-      answer: false,
-      category: "entertainment",
+      question: "The Indian Ocean is the third largest ocean in the world",
+      answer: true,
+      category: "geography",
       id: "question9",
     },
     {
-      question: "entertainment 2",
+      question: "There are more countries in Africa than Asia",
       answer: false,
-      category: "entertainment",
+      category: "geography",
       id: "question10",
-    },
-    {
-      question: "entertainment 3",
-      answer: true,
-      category: "entertainment",
-      id: "question11",
-    },
-    {
-      question: "history 1",
-      answer: true,
-      category: "history",
-      id: "question12",
     },
     {
       question: "Madris is more easterly than London",
       answer: false,
       category: "geography",
-      id: "question13",
-    },
-    {
-      question: "history 2",
-      answer: true,
-      category: "history",
-      id: "question14",
-    },
-    {
-      question: "history 3",
-      answer: false,
-      category: "history",
-      id: "question15",
-    },
-    {
-      question: "sports 1",
-      answer: true,
-      category: "sport",
-      id: "question16",
-    },
-    {
-      question: "sports 2",
-      answer: false,
-      category: "sport",
-      id: "question17",
-    },
-    {
-      question: "sports 3",
-      answer: false,
-      category: "sport",
-      id: "question18",
+      id: "question11",
     },
     {
       question: "The currency of Switzerland is the Euro",
       answer: false,
       category: "geography",
-      id: "question19",
-    },/*
-    {
-      question: 
-      answer: 
-      category:
-      id: "question20",
+      id: "question12",
     },
-    {
-      question: 
-      answer: ,
-      category:
-      id: "question21",
-    },
-    {
-      question: 
-      answer: ,
-      category:
-      id: "question22",
-    },
-    {
-      question: 
-      answer: ,
-      category:
-      id: "question23",
-    },
-    {
-      question: 
-      answer: ,
-      category:
-      id: "question24",
-    },*/
     {
       question: "China borders the same numbers of countries as Russia",
       answer: true,
       category: "geography",
-      id: "question25",
-    },/*
-    {
-      question:
-      answer: ,
-      category:
-      id: "question26",
+      id: "question13",
     },
-    {
-      question: 
-      answer: ,
-      category: 
-      id: "question27",
-    },
-    
-    {
-      question: 
-      answer: ,
-      category:
-      id: "question28",
-    },
-    {
-      question: 
-      answer: ,
-      category:
-      id: "question29",
-    },
-    {
-      question: 
-      answer: ,
-      category:
-      id: "question30",
-    },*/
     {
       question: "Rhode Island has a greater population than Mongolia",
       answer: false,
       category: "geography",
-      id: "question31",
-    },/*
-    {
-      question: 
-      answer: ,
-      category:
-      id: "question32",
+      id: "question14",
     },
-    {
-      question: 
-      answer: ,
-      category:
-      id: "question33",
-    },
-    {
-      question: 
-      answer: ,
-      category:
-      id: "question34",
-    },
-    {
-      question: 
-      category:
-      id: "question35",
-    },
-    {
-      question: 
-      answer: ,
-      category:
-      id: "question36",
-    },*/
     {
       question: "Greenland is on the Eurasian tectonic plate",
       answer: false,
       category: "geography",
-      id: "question37",
+      id: "question15",
     },
-    /*
-    {
-      question: 
-      answer: ,
-      category:
-      id: "question38",
-    },
-    {
-      question: 
-      answer: ,
-      category:
-      id: "question39",
-    },
-    {
-      question: 
-      answer: ,
-      category:
-      id: "question40",
-    },
-    {
-      question: 
-      answer: ,
-      category:
-      id: "question41",
-    },
-    {
-      question: ,
-      answer: ,
-      category:
-      id: "question42",
-    },*/
     {
       question: "Tallin is the capital city of Estonia",
       answer: true,
       category: "geography",
-      id: "question43",
-    },/*
+      id: "question16",
+    },
     {
-      question: ,
-      answer: ,
-      category:
+      question: "With its 2000 volumes, the papal library in Avignon was once the largest in Europe",
+      answer: true,
+      category: "arts",
+      id: "question17",
+    },
+    {
+      question: "The Statue of Liberty was designed in France",
+      answer: true,
+      category: "arts",
+      id: "question18",
+    },
+    {
+      question: "arte3",
+      answer: false,
+      category: "arts",
+      id: "question19",
+    },
+    {
+      question: "arte4",
+      answer: false,
+      category: "arts",
+      id: "question20",
+    },
+    {
+      question: "arte5",
+      answer: false,
+      category: "arts",
+      id: "question21",
+    },
+    {
+      question: "arte6",
+      answer: false,
+      category: "arts",
+      id: "question22",
+    },
+    {
+      question: "arte7",
+      answer: false,
+      category: "arts",
+      id: "question23",
+    },
+    {
+      question: "arte8",
+      answer: false,
+      category: "arts",
+      id: "question24",
+    },
+    {
+      question: "history1",
+      answer: false,
+      category: "history",
+      id: "question25",
+    },
+    {
+      question: "history2",
+      answer: false,
+      category: "history",
+      id: "question26",
+    },
+    {
+      question: "history3",
+      answer: false,
+      category: "history",
+      id: "question27",
+    },
+    {
+      question: "history4",
+      answer: false,
+      category: "history",
+      id: "question28",
+    },
+    {
+      question: "history5",
+      answer: false,
+      category: "history",
+      id: "question29",
+    },
+    {
+      question: "history6",
+      answer: false,
+      category: "history",
+      id: "question30",
+    },
+    {
+      question: "history7",
+      answer: false,
+      category: "history",
+      id: "question31",
+    },
+    {
+      question: "entertainment1",
+      answer: false,
+      category: "entertainment",
+      id: "question32",
+    },
+    {
+      question: "entertainment2",
+      answer: false,
+      category: "entertainment",
+      id: "question33",
+    },
+    {
+      question: "entertainment3",
+      answer: false,
+      category: "entertainment",
+      id: "question34",
+    },
+    {
+      question: "entertainment4",
+      answer: false,
+      category: "entertainment",
+      id: "question35",
+    },
+    {
+      question: "entertainment5",
+      answer: false,
+      category: "entertainment",
+      id: "question36",
+    },
+    {
+      question: "entertainment6",
+      answer: false,
+      category: "entertainment",
+      id: "question37",
+    },
+    {
+      question: "entertainment7",
+      answer: false,
+      category: "entertainment",
+      id: "question38",
+    },
+    {
+      question: "sport1",
+      answer: false,
+      category: "sport",
+      id: "question39",
+    },
+    {
+      question: "sport2",
+      answer: false,
+      category: "sport",
+      id: "question40",
+    },
+    {
+      question: "sport3",
+      answer: false,
+      category: "sport",
+      id: "question41",
+    },
+    {
+      question: "sport4",
+      answer: false,
+      category: "sport",
+      id: "question42",
+    },
+    {
+      question: "sport5",
+      answer: false,
+      category: "sport",
+      id: "question43",
+    },
+    {
+      question: "sport6" ,
+      answer: false,
+      category: "sport",
       id: "question44",
     },
     {
-      question: 
-      answer: 
-      category:
+      question: "sport7",
+      answer: false,
+      category: "sport",
       id: "question45",
-    },*/
+    }
     
   ]
-
-
-
-  let button = document.getElementById("#buttonStart");
-  let divShowInformation = document.getElementById("center");
-
-  button.addEventListener("click", function(){
-    let dice = diceResult(1, 6);
-    divShowInformation.innerHTML = `<img src="./images/result_${dice}.png">`
-    paintGrey();
-    movePlayer(dice);
-    
-
-  })  
-  /*setTimeout(function(){
-      divShowInformation.innerHTML = '';
-    }, 1000)*/
-  
-
-  let arrayBox = document.querySelectorAll("[id^='box']");
-  
-  for(let i = 0; i < arrayBox.length; i++){
-    arrayBox[i].addEventListener("click", function(){     
-      //divShowInformation.innerHTML = ("questions[43].question")
-      let hashahs = showQuestion()
-      divShowInformation.innerHTML= hashahs.question;
-    })
-  //en que categoria he caido
-  }
-  
-})
-
-
