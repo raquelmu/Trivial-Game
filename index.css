@@ -1,0 +1,73 @@
+body{
+    background-image: url(images/fondo_start.png);
+    background-size: cover;
+   
+}
+.container-title{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items :flex-end;
+}
+.title{
+    font-family: 'VT323', monospace;
+    font-size: 130px;
+    color: red;
+    text-shadow: 1px 1px 1px white;
+    margin: 50px;
+
+}
+
+.container-button{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items :flex-start;
+
+ 
+}
+
+.button-start{
+    width: 250px;
+    height: 80px;
+    font-size: 50px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+
+}
+.button-start:active {
+    transform: translateY(2px);
+}
+
+.button-start {
+    background-color: #000000;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 30px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+        
+.button-start:hover {
+     opacity: 0.8;
+}
+
+.red{
+    color: red;
+}
+
+.green{
+    color: green;
+}
+.blue{
+    color: blue;
+}
+.black{
+    color: black
+}
