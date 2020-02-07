@@ -240,7 +240,7 @@ let box = [
       id: "question1",
     },
     {
-      question: "Does the atmosphere breath?",
+      question: "Can you breathe in the atmosphere?",
       answer: true,
       category: "science",
       id: "question2",
@@ -265,7 +265,7 @@ let box = [
     },
     {
       question: "Aluminium is GOOD at conducting heat",
-      answer: true ,
+      answer: true,
       category: "science",
       id: "question6",
     },
@@ -343,8 +343,8 @@ let box = [
       id: "question18",
     },
     {
-      question: "arte3",
-      answer: false,
+      question: "Leonardo da Vinci pinted 'La Mona Lisa'",
+      answer: true,
       category: "arts",
       id: "question19",
     },
