@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   let time = undefined;
   let seconds = 0;
-  let minutes = 5;
+  let minutes = 2;
 
   function startChronometer(){
     const secondsDiv = document.getElementById("seconds")
@@ -45,16 +45,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
     window.location.href="gameover.html"
   })
 
+  const boardDiv = document.getElementById("board")
+  let noBoard = document.createElement("div")
+
   const buttonPause = document.getElementById("pause");
   buttonPause.addEventListener("click", function(){
-    if (time) {
+    if (time !== undefined) {
       clearInterval(time);
       time = undefined;
-      //muestro la pagina de pause
+
+      noBoard.classList.add("hideBoard")
+      boardDiv.appendChild(noBoard)
+
       console.log('pausando..')
-      buttonPause.innerText = 'CONTINUAR';
+      buttonPause.innerText = 'CONTINUE';
     } else {
-      //quito el div
+      boardDiv.removeChild(noBoard)
       buttonPause.innerText = 'PAUSE';
       startChronometer()
     }

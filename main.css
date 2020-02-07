@@ -1,26 +1,37 @@
 body{
-    font-family: 'Patua One', cursive;
+    font-family: 'Antic Slab', serif;
 }
 .container-score-chrono{
     display: flex;
-    width: 1545px;
-    height: 250px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-end;
-    margin: 60px auto;
+    width: 1000px;
+    justify-content: center;
+    margin: auto;
 
 }
 .stop{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     height: 30px;
 }
 
+.button-stop-pause{
+    display: flex;
+    justify-content: space-evenly;
+
+}
 .button-stop{
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    background-color: rgb(101, 101, 101);
 
 
+    font-family: 'Antic Slab', serif;
+    color: white;
+}
+.button-stop:hover{
+    background-color: rgb(27, 96, 126); 
+    color: white;
 }
 .container-timer{
     height: 60px;
@@ -36,18 +47,24 @@ body{
     width: 250px;
     height: 100px;
     border-radius: 24px;
-    border: 1px solid black;
     font-size: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+    background-color: #333;
+    color: white;
+    margin-right: 200px;
 
 }
 .chrono{
     width: 250px;
     height: 100px;
     border-radius: 24px;
-    border: 1px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+    background-color: #333;
+    color: white;
+
 
 }
 .container{
@@ -55,8 +72,16 @@ body{
     margin: 60px auto;
     align-items: center;
     width: 1055px;
+    position: relative;
 }
-
+.hideBoard{
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    background-color: white;
+    top: -5px;
+    left: 0px;
+}
 .container-top{
     display: flex;
 }
@@ -89,20 +114,6 @@ body{
     text-align: center;
 }
 
-.button{
-    width: 150px;
-    height: 50px;
-    font-size: 20px;
-    text-align: center;
-    cursor: pointer;
-    outline: none;
-    color: #fff;
-    background-color: #688fa2;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
-    font-family: 'Courgette', cursive;
-}
 
 .buttonAnswer{
     position: relative;
@@ -112,20 +123,18 @@ body{
     color: #FFFFFF;
     padding: 20px 30px;
     width: 100px;
-    text-align: center;
-    text-decoration: none;
-    overflow: hidden;
-    cursor: pointer;
     margin: 0px 30px;
-    border-radius: 15px;
-    font-family: 'Patua One', cursive;
+    font-family: 'Antic Slab', serif;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    font-weight: bolder;
+    
+    
 }
 
-.button:active:after {
-    padding: 0;
-    margin: 0;
-    opacity: 1;
-    transition: 0s
+.buttonAnswer:hover{
+    background-color: rgb(27, 96, 126); 
+    color: white;
 }
 
 .answerQuestion{
@@ -133,14 +142,28 @@ body{
     display: none;
 }
 
-.button:hover {
-    background-color: #688fa2}
 
+.button{
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #3f9091;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 6px #999;
+    font-family: 'Antic Slab', serif;
+    font-weight: bolder;
+}
 .button:active {
-  background-color: #688fa2;
+  background-color: #3f9091b8;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
 
 .container-bottom{
     display: flex;

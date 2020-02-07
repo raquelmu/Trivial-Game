@@ -1,18 +1,57 @@
-# Trivial-Game
+# Quizz Me!
 
 ## Description
-El objetivo del juego es ser el primero en obtener el rombo completo; cada porción del rombo corresponde a una temática distinta, por lo que para completarlo será necesario haber respodido correctamente una pregunta de cada temática.
-Habrán cuatro temáticas, identificadas por su color:
--Arte y literatura (Amarillo)
--Historia (Naranja)
--Ciencia (Verde)
--Geografía (Azul)
 
-## Tablero y normas del juego
-El tablero será cuadrado y estará dividido en casillas. Cada uno de éstas será de un color distinto, correspondiente a su temática.
-Los jugadores jugarán por turnos. La puntuación obtenida tras lanzar los dados (del 1 al 6) indicará el número de casillas que deberá avanzar en esta jugada. Si el jugador acierta la pregunta correspondiente obtendrá un triángulo del color asignado a la temática de la pregunta; en caso de ya disponer de un triángulo del mismo color, no se contabilizará el acierto.
-La partida finalizará cuando el primer jugador obtenga el rombo completo.
 
-## Number of players
-El número mínimo de jugdores será 2, y el máximo 4.
+The objective of the game is to reach the maximum score in less than 2 minutes. The objective is achieved by answering questions of general and popular culture.
 
+The questions are divided into 6 categories:
+- Geography (blue)
+- Science (green)
+- History (yellow)
+- Arts (purple)
+- Entertainment (pink)
+- Sport (orange)  
+
+
+## MVP
+
+####Technique
+
+HTML5, CSS, and Vanilla JavaScript
+
+####GAME STATES
+
+* **Start Screen**
+
+    * Title
+    * Play button
+        
+* **Game Screen**
+
+    * Board game
+    * Score
+    * Timer and play/stop/resume buttons
+    * Questions
+    * Dice
+
+* **Game Over Screen**
+    * Title
+
+* **Winner Screen**
+   * Title
+   * Image (gif)
+
+
+
+## BACKLOG
+
+- Improve the board.
+- Better animation when throwing the dice.
+
+
+
+## LINKS
+- Repo: https://github.com/raquelmu/Trivial-Game
+- Website: https://raquelmu.github.io/Trivial-Game/
+- Trello: https://trello.com/b/mlMTzrqX/trivialgame
